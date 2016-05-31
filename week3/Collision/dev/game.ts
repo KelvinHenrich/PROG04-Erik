@@ -22,7 +22,7 @@ class Game {
     // game loop
     private gameLoop():void{
         // hier checken of de ball een paddle raakt
-        let hit = this.utils.hasOverlap(this.ball, this.paddle);
+        let hit = this.utils.objectsCollide(this.ball, this.paddle);
         if(hit){
             document.getElementsByTagName("ui")[0].innerHTML = "BALL HITS PADDLE!";
             this.ball.hitPaddle();

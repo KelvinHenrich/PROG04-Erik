@@ -25,7 +25,7 @@ class Game {
        this.char2.move();
         
        // de game kan zien of de Charmeleons elkaar raken
-       let hit:boolean = this.utils.isOverlap(this.char1, this.char2);
+       let hit:boolean = this.utils.objectsCollide(this.char1, this.char2);
        
        // vertel aan de charmeleons of ze geraakt worden
        this.char1.showHit(hit);

@@ -74,7 +74,7 @@ var Game = (function () {
     Game.prototype.gameLoop = function () {
         this.char1.move();
         this.char2.move();
-        var hit = this.utils.isOverlap(this.char1, this.char2);
+        var hit = this.utils.objectsCollide(this.char1, this.char2);
         this.char1.showHit(hit);
         this.char2.showHit(hit);
         requestAnimationFrame(this.gameLoop.bind(this));
@@ -87,8 +87,8 @@ window.addEventListener("load", function () {
 var Utils = (function () {
     function Utils() {
     }
-    Utils.prototype.isOverlap = function (c1, c2) {
-        return !(c2.x > c1.x + c1.width || c2.x + c2.width < c1.x || c2.y > c1.y + c1.height || c2.y + c2.height < c1.y);
+    Utils.prototype.objectsCollide = function (c1, c2) {
+        return (c1.x < c2.x + c2.width && c1.x + c1.width > c2.x && c1.y < c2.y + c2.height && c1.height + c1.y > c2.y);
     };
     return Utils;
 }());
