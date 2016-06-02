@@ -22,6 +22,9 @@ Pixel Aquarium Javascript
 ## Week 5
 - Inheritance met Crossy Road
 
+## Week 6
+- Buggy Clock
+
 ## Snippets
 - Leeg startproject voor VS Code
 - Code snippets voor CSS en javascript
