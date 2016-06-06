@@ -24,6 +24,7 @@ Pixel Aquarium Javascript
 
 ## Week 6
 - Buggy Clock
+- Remove instance from Array
 
 ## Snippets
 - Leeg startproject voor VS Code
